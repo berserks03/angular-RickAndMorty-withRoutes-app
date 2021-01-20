@@ -1,0 +1,15 @@
+<h1 style="text-align: center;">All characters</h1>
+
+<div class="row row-cols-1 row-cols-md-4 justify-content-center" *ngIf="characters$ | async as characters">
+  <div class="col m-2" *ngFor="let character of characters">
+    <div class="card">
+      <img src="{{character.image}}" class="card-img-top" alt="{{character.id}}">
+      <div class="card-body">
+        <h5 class="card-title">Name: {{ character.name }}</h5>
+        <h6 class="card-text">Type: {{character.type?character.type:'...'}}</h6>
+        <p class="card-text">ID: {{ character.id }}</p>
+        <a [routerLink]="['/characters/' + character.id]" class="btn btn-primary">Read more ...</a>
+      </div>
+    </div>
+  </div>
+</div>

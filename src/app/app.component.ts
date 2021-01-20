@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-RickAndMorty-withRoutes-app';
+  title = 'Angular Rick and Morty with routes app';
 }

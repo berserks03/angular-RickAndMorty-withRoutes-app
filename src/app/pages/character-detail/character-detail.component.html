@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">Single character</h1>
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <div
+      *ngIf="character$ |async as character"
+      class="card"
+    >
+      <img src="{{character.image}}" class="card-img-top" alt="{{character.id}}">
+      <div class="card-body">
+        <h5 class="card-title">Name: {{ character.name }}</h5>
+        <h6 class="card-text">Type: {{character.type?character.type:'...'}}</h6>
+        <p class="card-text">ID: {{ character.id }}</p>
+        <a [routerLink]="['/characters/']" class="btn btn-primary">Back to all characters</a>
+      </div>
+    </div>
+  </div>
+</div>
+
